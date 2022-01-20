@@ -10,3 +10,6 @@ crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = { version = "0.15.1", features = ["extension-module"] }
+json5format = "0.2.4"
+json5 = "0.4.1"
+serde_json = "1.0"

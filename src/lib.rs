@@ -1,15 +1,14 @@
-
 use pyo3::prelude::*;
+use serde_json::Value;
 
-/// Formats the sum of two numbers as string.
 #[pyfunction]
-fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
-    Ok((a + b).to_string())
+fn loads(s: &str) -> PyResult<String> {
+    let a = json5::from_str::<Value>(&s).unwrap().to_string();
+    Ok(a)
 }
 
-/// A Python module implemented in Rust.
 #[pymodule]
 fn json666(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
+    m.add_function(wrap_pyfunction!(loads, m)?)?;
     Ok(())
 }
