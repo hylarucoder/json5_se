@@ -130,6 +130,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "json5_se"
+version = "0.1.0"
+dependencies = [
+ "json5",
+ "json5format",
+ "pyo3",
+ "serde_json",
+]
+
+[[package]]
 name = "json5format"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -137,16 +147,6 @@ checksum = "9594106bc3da8429e6e58081bf9f4846735438993c15a220001abacf44300064"
 dependencies = [
  "lazy_static",
  "regex",
-]
-
-[[package]]
-name = "json666"
-version = "0.1.0"
-dependencies = [
- "json5",
- "json5format",
- "pyo3",
- "serde_json",
 ]
 
 [[package]]
