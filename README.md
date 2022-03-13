@@ -24,7 +24,7 @@ No \\n's!",
 %timeit json5.loads(data_small)
 2.59 ms ± 17.7 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 
-%timeit %timeit json.loads(json5_se.loads(data_large))
+%timeit json.loads(json5_se.loads(data_small))
 521 µs ± 5.28 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 
 ```
