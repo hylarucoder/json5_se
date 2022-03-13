@@ -8,7 +8,7 @@ fn loads(s: &str) -> PyResult<String> {
 }
 
 #[pymodule]
-fn json666(_py: Python, m: &PyModule) -> PyResult<()> {
+fn json5_se(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(loads, m)?)?;
     Ok(())
 }
